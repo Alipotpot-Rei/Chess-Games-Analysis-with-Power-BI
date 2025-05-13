@@ -34,7 +34,7 @@
         * Popularity of different openings
         * Impact of time control on game results
         * Impact of playing white pieces on game results
-    * Use Power BI's features to create interactive dashboards with slicer. 
+    * Use Power BI's features to create interactive dashboard with slicer. 
 * **Key Metrics and Analysis:**
     * Player win rates
     * Opening success rates (White vs. Black)
