@@ -29,11 +29,11 @@
 * **Data Analysis and Visualization:**
     * Explore the dataset to understand its structure and content.
     * Create visualizations to analyze various aspects of the games, such as:
-        * Win/loss/draw distribution
-        * Player rating distribution and performance
-        * Popularity of different openings
-        * Impact of time control on game results
-        * Impact of playing white pieces on game results
+        * Win/loss/draw distribution (doughnut chart)
+        * Player rating distribution and performance (KPI card) 
+        * Popularity of different openings (KPI card, treemap, and funnel chart)
+        * Impact of time control on game results (matrix chart)
+        * Impact of playing white pieces on game results (KPI card)
     * Use Power BI's features to create interactive dashboard with slicer. 
 * **Key Metrics and Analysis:**
     * Player win rates
