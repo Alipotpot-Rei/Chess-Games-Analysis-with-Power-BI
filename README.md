@@ -34,13 +34,32 @@
         * Popularity of different openings (KPI card, treemap, and funnel chart)
         * Impact of time control on game results (matrix chart)
         * Impact of playing white pieces on game results (KPI card)
-    * Use Power BI's features to create interactive dashboard with slicer. 
-* **Key Metrics and Analysis:**
-    * Player win rates
-    * Opening success rates (White vs. Black)
-    * Average game length
-    * Most common game termination methods (e.g., checkmate, resignation)
-    * Correlations between player ratings and game outcomes
+    * Use DAX to calculate the following:
+        * HigherRatedWinCount = 
+SUMX(
+    games,
+    IF(
+        games[victory_status] IN {"mate", "resign", "outoftime"} &&
+        (
+            (games[black_rating] > games[white_rating] && games[winner] = "black") ||
+            (games[white_rating] > games[black_rating] && games[winner] = "white")
+        ),
+        1,
+        0
+    )
+)
+        * white_win_count = 
+SUMX(
+    games, 
+    IF(
+        SEARCH("white", games[winner], 1, 0) > 0, 
+        1, 
+        0
+    )
+)
+        * Higher Rated Win Percentage = DIVIDE(games[HigherRatedWinCount],games[Total Games])
+        * White Win Percentage = DIVIDE(games[white_win_count],games[Total Games])
+
 * **Potential Analysis Areas:**
     * Opening Analysis: Which openings are most common? Which have the highest win rates for white/black?
     * Player Performance: How do player ratings correlate with win rates? Are there differences in performance between different rating levels?
