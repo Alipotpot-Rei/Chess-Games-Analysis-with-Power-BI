@@ -9,7 +9,7 @@
 
 ###  Data Source
 
-* The dataset is a set of just over 20,000 games collected from a selection of users on the site Lichess.org. This dataset contains information about chess games, including player details, game results, moves, openings, and opening ply (number of moves in the opening phase). 
+* The dataset is a set of just over 20,000 games collected from a selection of users on the site Lichess.org. The chess ratings of the users range from 784 to 1883. This dataset contains information about chess games, including player details, game results, moves, openings, and opening ply (number of moves in the opening phase). 
 
 ### Project Scope
 
